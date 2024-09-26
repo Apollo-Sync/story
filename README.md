@@ -80,10 +80,12 @@ LimitNOFILE=65535
 WantedBy=multi-user.target
 EOF
 
-# enable and start geth
+**enable and start geth**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable story-geth
 sudo systemctl restart story-geth && sudo journalctl -u story-geth -f
+```
 
 # enable and start story
 sudo systemctl daemon-reload
