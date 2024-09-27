@@ -22,7 +22,8 @@ source $HOME/.bash_profile
 [ ! -d ~/go/bin ] && mkdir -p ~/go/bin
 ```
 
-# download binaries
+**download binaries**
+```
 cd $HOME
 rm -rf bin
 mkdir bin
@@ -32,6 +33,7 @@ tar -xvf geth-linux-amd64-0.9.2-ea9f0d2.tar.gz
 mv ~/bin/geth-linux-amd64-0.9.2-ea9f0d2/geth ~/go/bin/
 mkdir -p ~/.story/story
 mkdir -p ~/.story/geth
+```
 
 # Install Story
 cd $HOME
