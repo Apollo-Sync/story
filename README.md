@@ -35,7 +35,8 @@ mkdir -p ~/.story/story
 mkdir -p ~/.story/geth
 ```
 
-# Install Story
+**Install Story**
+```
 cd $HOME
 rm -rf story
 git clone https://github.com/piplabs/story
@@ -43,6 +44,7 @@ cd story
 git checkout v0.10.0
 go build -o story ./client
 sudo mv ~/story/story ~/go/bin/
+```
 
 # initialize the story client
 story init --moniker test --network iliad
