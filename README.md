@@ -46,8 +46,10 @@ go build -o story ./client
 sudo mv ~/story/story ~/go/bin/
 ```
 
-# initialize the story client
+**initialize the story client**
+```
 story init --moniker test --network iliad
+```
 
 # create geth servie file
 sudo tee /etc/systemd/system/story-geth.service > /dev/null <<EOF
