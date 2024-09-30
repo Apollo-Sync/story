@@ -51,11 +51,13 @@ sudo mv ~/story/story ~/go/bin/
 story init --moniker test --network iliad
 ```
 
-# create geth servie file
+**create geth servie file**
+```
 sudo tee /etc/systemd/system/story-geth.service > /dev/null <<EOF
 [Unit]
 Description=Story Geth daemon
 After=network-online.target
+```
 
 [Service]
 User=$USER
