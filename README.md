@@ -57,7 +57,6 @@ sudo tee /etc/systemd/system/story-geth.service > /dev/null <<EOF
 [Unit]
 Description=Story Geth daemon
 After=network-online.target
-```
 
 [Service]
 User=$USER
@@ -69,8 +68,9 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
-# create story service file
+**create story service file**
 sudo tee /etc/systemd/system/story.service > /dev/null <<EOF
 [Unit]
 Description=Story Service
