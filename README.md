@@ -95,11 +95,14 @@ sudo systemctl enable story-geth
 sudo systemctl restart story-geth && sudo journalctl -u story-geth -f
 ```
 
-# enable and start story
+**enable and start story**
+```
 sudo systemctl daemon-reload
 sudo systemctl enable story
 sudo systemctl restart story && sudo journalctl -u story -f
-Node Sync Status Checker
+```
+
+**Node Sync Status Checker**
 #!/bin/bash
 rpc_port=$(grep -m 1 -oP '^laddr = "\K[^"]+' "$HOME/.story/story/config/config.toml" | cut -d ':' -f 3)
 while true; do
