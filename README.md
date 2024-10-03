@@ -103,6 +103,7 @@ sudo systemctl restart story && sudo journalctl -u story -f
 ```
 
 **Node Sync Status Checker**
+```
 #!/bin/bash
 rpc_port=$(grep -m 1 -oP '^laddr = "\K[^"]+' "$HOME/.story/story/config/config.toml" | cut -d ':' -f 3)
 while true; do
@@ -124,6 +125,8 @@ while true; do
 
   sleep 5
 done
+```
+
 Create validator
 View your validator key
 
