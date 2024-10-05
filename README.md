@@ -137,8 +137,12 @@ Use this private key to import your account into a wallet, e.g. Metamask or Phan
 ```
 curl localhost:$(sed -n '/\[rpc\]/,/laddr/ { /laddr/ {s/.*://; s/".*//; p} }' $HOME/.story/story/config/config.toml)/status | jq
 ```
-Create validator
+
+**Create validator**
+```
 story validator create --stake 1000000000000000000 --private-key $(cat $HOME/.story/story/config/private_key.txt | grep "PRIVATE_KEY" | awk -F'=' '{print $2}')
+```
+
 Remember to backup your validator priv_key from here:
 
 cat $HOME/.story/story/config/priv_validator_key.json
