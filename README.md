@@ -143,11 +143,12 @@ curl localhost:$(sed -n '/\[rpc\]/,/laddr/ { /laddr/ {s/.*://; s/".*//; p} }' $H
 story validator create --stake 1000000000000000000 --private-key $(cat $HOME/.story/story/config/private_key.txt | grep "PRIVATE_KEY" | awk -F'=' '{print $2}')
 ```
 
-Remember to backup your validator priv_key from here:
-
+**Remember to backup your validator priv_key from here**
+```
 cat $HOME/.story/story/config/priv_validator_key.json
 Firewall rules
 Configure firewall rules:
+```
 
 sudo ufw allow 30303/tcp comment geth_p2p_port
 sudo ufw allow 26656/tcp comment story_p2p_port
