@@ -146,12 +146,15 @@ story validator create --stake 1000000000000000000 --private-key $(cat $HOME/.st
 **Remember to backup your validator priv_key from here**
 ```
 cat $HOME/.story/story/config/priv_validator_key.json
-Firewall rules
-Configure firewall rules:
 ```
 
+***Firewall rules**
+Configure firewall rules:
+```
 sudo ufw allow 30303/tcp comment geth_p2p_port
 sudo ufw allow 26656/tcp comment story_p2p_port
+```
+
 Delete node
 sudo systemctl stop story story-geth
 sudo systemctl disable story story-geth
