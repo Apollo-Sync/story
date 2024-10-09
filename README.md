@@ -155,9 +155,11 @@ sudo ufw allow 30303/tcp comment geth_p2p_port
 sudo ufw allow 26656/tcp comment story_p2p_port
 ```
 
-Delete node
+**Delete node**
+```
 sudo systemctl stop story story-geth
 sudo systemctl disable story story-geth
 rm -rf $HOME/.story
 sudo rm /etc/systemd/system/story.service /etc/systemd/system/story-geth.service
 sudo systemctl daemon-reload
+```
