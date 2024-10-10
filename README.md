@@ -71,6 +71,7 @@ EOF
 ```
 
 **create story service file**
+```
 sudo tee /etc/systemd/system/story.service > /dev/null <<EOF
 [Unit]
 Description=Story Service
@@ -87,6 +88,7 @@ LimitNOFILE=65535
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 **enable and start geth**
 ```
